@@ -8,19 +8,21 @@ import ModalProvider from "./context/ModalContext";
 
 function App() {
   return (
-    <CategoriasProvider>
-      <RecetasProvider>
-        <ModalProvider>
-          <Header />
-          <div className="container mt-5">
-            <div className="row">
-              <Formulario />
+    <>
+      <CategoriasProvider>
+        <RecetasProvider>
+          <ModalProvider>
+            <Header />
+            <div className="container mt-5">
+              <div className="row">
+                <Formulario />
+              </div>
+              <ListaRecetas />
             </div>
-            <ListaRecetas />
-          </div>
-        </ModalProvider>
-      </RecetasProvider>
-    </CategoriasProvider>
+          </ModalProvider>
+        </RecetasProvider>
+      </CategoriasProvider>
+    </>
   );
 }
 
